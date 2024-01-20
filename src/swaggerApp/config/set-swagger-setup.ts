@@ -1,5 +1,6 @@
 import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
 import { INestApplication } from '@nestjs/common';
+
 export function setSwaggerSetup(app: INestApplication): void {
   const options = new DocumentBuilder()
     .setTitle('Nest JS App')
