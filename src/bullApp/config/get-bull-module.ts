@@ -11,11 +11,9 @@ export function getBullModule(): DynamicModule {
   });
 }
 
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-expect-error
-``` 
 // Replace the above synchronous Code with the Below Code to make it Async
 
+/*
 import { BullModule } from '@nestjs/bull';
 import { DynamicModule } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
@@ -37,4 +35,4 @@ export function getBullModule(): DynamicModule {
     }),
   });
 }
-```;
+ */

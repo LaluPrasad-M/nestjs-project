@@ -58,6 +58,23 @@ $ npm i -D @types/bull
 ```bash
 $ npm i @nestjs/config
 ```
+<hr style="border:2px solid gray">
+
+## 3. Swagger
+Allows us to generate documentation simply based on our code
+
+### Package installation
+```bash
+$ npm i @nestjs/swagger swagger-ui-express
+```
+<hr style="border:2px solid gray">
+
+## !4. class-validator
+Provides decorators and utilities for validating data using class-based validation rules
+### Package installation
+```bash
+$ npm i class-validator
+```
 
 <hr style="border:2px solid rgb(90,40,40)">
 
