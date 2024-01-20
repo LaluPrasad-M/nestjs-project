@@ -1,24 +1,12 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { BullMQModule } from './bullMQ/bull.module';
-import { getBullModule } from './bullMQ/Configs/get-bull-module';
-import { ConfigModule } from '@nestjs/config';
+import { BullMQModule } from './bullApp/bull.module';
+import { getBullModule } from './bullApp/config/get-bull-module';
+import { getConfigModule } from './configServiceApp/config/get-config-module';
 
 @Module({
-  imports: [
-    ConfigModule.forRoot({
-      isGlobal: true,
-      // envFilePath: ['.env'],
-      // validationSchema: configSchema,
-      validationOptions: {
-        allowUnknown: true,
-        abortEarly: true,
-      },
-    }),
-    getBullModule(),
-    BullMQModule,
-  ],
+  imports: [getConfigModule(), getBullModule(), BullMQModule],
   controllers: [AppController],
   providers: [AppService],
 })
