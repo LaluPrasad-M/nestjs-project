@@ -15,9 +15,9 @@
 <a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
 <a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
 <a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
+  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img alt="Donate" src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
     <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
+  <a href="https://twitter.com/nestframework" target="_blank"><img alt="Follow" src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
 </p>
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
@@ -49,7 +49,7 @@ $ npm i @nestjs/bull bull
 
 $ npm i -D @types/bull
 ```
-<hr style="border:2px solid gray">
+<hr style="border:2px solid rgb(128,128,128)">
 
 ## 2. ConfigService
 `@nestjs/config` in NestJS simplifies configuration management by easily loading and accessing settings from sources like environment variables and files. It streamlines the organization of configuration for better maintainability
@@ -58,7 +58,7 @@ $ npm i -D @types/bull
 ```bash
 $ npm i @nestjs/config
 ```
-<hr style="border:2px solid gray">
+<hr style="border:2px solid rgb(128,128,128)">
 
 ## 3. Swagger
 Allows us to generate documentation simply based on our code
@@ -67,7 +67,7 @@ Allows us to generate documentation simply based on our code
 ```bash
 $ npm i @nestjs/swagger swagger-ui-express
 ```
-<hr style="border:2px solid gray">
+<hr style="border:2px solid rgb(128,128,128)">
 
 ## !4. class-validator
 Provides decorators and utilities for validating data using class-based validation rules
