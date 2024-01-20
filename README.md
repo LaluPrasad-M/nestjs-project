@@ -22,17 +22,52 @@
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
-## Description
+# Description
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
-## Installation
+<hr style="border:3px solid rgb(90,40,40)">
+
+# To create new Nestjs App
+```bash
+$ nvm use 18
+
+$ npm i -g @nest/cli
+
+$ nest new nestjs-project
+```
+<hr style="border:2px solid rgb(80,80,40)">
+
+# Installed Packages
+
+## 1. Bull
+Bull is a nestjs Library used to run independent Jobs which are added in the BullQueue. Bull uses Redis to persist job data. Because it is Redis-backed, your Queue architecture can be completely distributed and platform-independent.
+
+### Package installation
+```bash
+$ npm i @nestjs/bull bull
+
+$ npm i -D @types/bull
+```
+<hr style="border:2px solid gray">
+
+## 2. Some Other Library
+Description
+
+### Package installation
+```bash
+$ npm i packageName
+```
+
+<hr style="border:2px solid rgb(90,40,40)">
+
+# Installation
 
 ```bash
 $ npm install
 ```
 
-## Running the app
+# Running the app
 
 ```bash
 # development
@@ -45,7 +80,7 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
-## Test
+# Test
 
 ```bash
 # unit tests
@@ -58,37 +93,3 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
-
-
-# App Instructions
-
-## Create app
-```
-$ nvm use 18
-
-$ npm i -g @nest/cli
-
-$ nest new nestjs-project
-```
-
-## Install Libraries
-
-### BullMQ
-```
-$ npm i @nestjs/bull bull
-
-$ npm i -D @types/bull
-```

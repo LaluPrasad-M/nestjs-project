@@ -1,7 +1,7 @@
 import { InjectQueue } from '@nestjs/bull';
 import { Injectable, Logger } from '@nestjs/common';
 import { Queue } from 'bull';
-import { TRANSCODE_QUEUE } from 'src/bullMQ/lib/constants/bullMQ';
+import { TRANSCODE_QUEUE, BullEvents } from 'src/bullMQ/lib/constants';
 
 @Injectable()
 export class BullMQService {
@@ -14,7 +14,7 @@ export class BullMQService {
   // This is a Bull MQ Producer
   async transcode() {
     this.logger.log(`Adding to ${TRANSCODE_QUEUE} Queue`);
-    await this.transcodeQueue.add({
+    await this.transcodeQueue.add(BullEvents.CONVERT_TO_MP4, {
       filename: './filename.mp3',
     });
     this.logger.log(`Successfully Added to ${TRANSCODE_QUEUE} Queue`);
