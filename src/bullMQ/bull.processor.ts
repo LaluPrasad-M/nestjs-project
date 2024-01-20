@@ -11,7 +11,9 @@ export class BullMQProcessor {
     name: BullEvents.CONVERT_TO_MP4,
   })
   async transcode(job: Job<unknown>) {
-    this.logger.log(`Processing ${TRANSCODE_QUEUE} Queue element`);
-    this.logger.debug('Queue Data: ', job.data);
+    this.logger.debug(`JOB Data: ${JSON.stringify(job)}`);
+    this.logger.debug(`Queue Data: ${JSON.stringify(job.data)}`);
+    await new Promise<void>((resolve) => setTimeout(resolve, 5000));
+    this.logger.log(`Completed the Job: ${job.id}`);
   }
 }

@@ -14,9 +14,15 @@ export class BullMQService {
   // This is a Bull MQ Producer
   async transcode() {
     this.logger.log(`Adding to ${TRANSCODE_QUEUE} Queue`);
-    await this.transcodeQueue.add(BullEvents.CONVERT_TO_MP4, {
-      filename: './filename.mp3',
-    });
+    await this.transcodeQueue.add(
+      BullEvents.CONVERT_TO_MP4,
+      {
+        filename: './filename.mp3',
+      },
+      {
+        jobId: new Date().valueOf(),
+      },
+    );
     this.logger.log(`Successfully Added to ${TRANSCODE_QUEUE} Queue`);
   }
 }
