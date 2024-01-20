@@ -51,12 +51,12 @@ $ npm i -D @types/bull
 ```
 <hr style="border:2px solid gray">
 
-## 2. Some Other Library
-Description
+## 2. ConfigService
+`@nestjs/config` in NestJS simplifies configuration management by easily loading and accessing settings from sources like environment variables and files. It streamlines the organization of configuration for better maintainability
 
 ### Package installation
 ```bash
-$ npm i packageName
+$ npm i @nestjs/config
 ```
 
 <hr style="border:2px solid rgb(90,40,40)">
