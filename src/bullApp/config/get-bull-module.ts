@@ -8,6 +8,9 @@ export function getBullModule(): DynamicModule {
       max: 24,
       duration: 3000,
     },
+    defaultJobOptions: {
+      removeOnComplete: true,
+    },
   });
 }
 
@@ -29,9 +32,12 @@ export function getBullModule(): DynamicModule {
         password: configService.get<string>('REDIS_PASSWORD', ''),
       },
       limiter: {
-        max: configService.get<number>('BULL_LIMITER_MAX', 24),
-        duration: configService.get<number>('BULL_LIMITER_DURATION', 3000),
+        max: 24,
+        duration: 3000,
       },
+      defaultJobOptions: {
+      removeOnComplete: true,
+    },
     }),
   });
 }

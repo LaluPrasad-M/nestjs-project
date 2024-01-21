@@ -69,7 +69,7 @@ $ npm i @nestjs/swagger swagger-ui-express
 ```
 <hr style="border:2px solid rgb(128,128,128)">
 
-## !4. class-validator
+## 4. class-validator
 Provides decorators and utilities for validating data using class-based validation rules
 ### Package installation
 ```bash
