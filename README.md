@@ -75,6 +75,14 @@ Provides decorators and utilities for validating data using class-based validati
 ```bash
 $ npm i class-validator
 ```
+<hr style="border:2px solid rgb(128,128,128)">
+
+## 4. Event Emitter
+Provides a simple observer implementation, allowing you to subscribe and listen for various events that occur in your application.
+### Package installation
+```bash
+$ npm i @nestjs/event-emitter
+```
 
 <hr style="border:2px solid rgb(90,40,40)">
 
