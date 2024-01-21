@@ -1,7 +1,7 @@
 import { IsNotEmpty, IsString, MaxLength, MinLength } from 'class-validator';
 import { ApiProperty } from '@nestjs/swagger';
 
-export class transcodeParamsDTO {
+export class TranscodeParamsDTO {
   @ApiProperty({
     description: 'Job ID for the Bull Queue',
     required: true,

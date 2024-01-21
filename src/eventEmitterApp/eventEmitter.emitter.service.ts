@@ -1,6 +1,7 @@
 import { Injectable, Logger } from '@nestjs/common';
 import { EventEmitter2 } from '@nestjs/event-emitter';
 import { Events } from './lib/constants';
+import { EventEmitterParamsDTO } from './evenEmitter.model';
 
 @Injectable()
 export class EventEmitterEmitterService {
@@ -8,10 +9,14 @@ export class EventEmitterEmitterService {
 
   private readonly logger = new Logger(EventEmitterEmitterService.name);
 
-  async eventEmitterEmit() {
+  async eventEmitterEmit(eventEmitterParamsDTO: EventEmitterParamsDTO) {
     this.logger.log(
-      `Received eventEmitter Request for event ${Events.MY_EVENT}`,
+      `Received eventEmitter Request for event: ${Events.MESSAGE_EVENT}, type: ${eventEmitterParamsDTO.type}`,
     );
-    this.eventEmitter.emit(Events.MY_EVENT);
+    this.eventEmitter.emit(
+      Events.MESSAGE_EVENT,
+      eventEmitterParamsDTO.type,
+      eventEmitterParamsDTO.message,
+    );
   }
 }

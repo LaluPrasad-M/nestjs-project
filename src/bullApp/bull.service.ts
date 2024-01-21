@@ -2,7 +2,7 @@ import { InjectQueue } from '@nestjs/bull';
 import { Injectable, Logger } from '@nestjs/common';
 import { Queue } from 'bull';
 import { TRANSCODE_QUEUE, BullEvents } from 'src/bullApp/lib/constants';
-import { transcodeParamsDTO } from './bull.model';
+import { TranscodeParamsDTO } from './bull.model';
 
 @Injectable()
 export class BullMQService {
@@ -13,7 +13,7 @@ export class BullMQService {
   private readonly logger = new Logger(BullMQService.name);
 
   // This is a Bull MQ Producer
-  async transcode(job: transcodeParamsDTO) {
+  async transcode(job: TranscodeParamsDTO) {
     try {
       this.logger.log(`Received Job ${job.jobId} to ${TRANSCODE_QUEUE} Queue`);
 

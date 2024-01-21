@@ -1,5 +1,7 @@
-import { Controller, Logger, Post } from '@nestjs/common';
+import { Body, Controller, Logger, Post } from '@nestjs/common';
 import { EventEmitterEmitterService } from './eventEmitter.emitter.service';
+import { EventEmitterParamsDTO } from './evenEmitter.model';
+import { ApiBody } from '@nestjs/swagger';
 
 @Controller('event-emitter')
 export class EventEmitterController {
@@ -8,9 +10,12 @@ export class EventEmitterController {
   ) {}
   private readonly logger = new Logger(EventEmitterController.name);
 
+  @ApiBody({ type: EventEmitterParamsDTO })
   @Post()
-  async eventEmitterEmit() {
+  async eventEmitterEmit(@Body() eventEmitterParamsDTO: EventEmitterParamsDTO) {
     this.logger.log('Post eventEmitter request received');
-    return this.eventEmitterEmitterService.eventEmitterEmit();
+    return this.eventEmitterEmitterService.eventEmitterEmit(
+      eventEmitterParamsDTO,
+    );
   }
 }
