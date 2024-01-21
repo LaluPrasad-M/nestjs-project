@@ -11,7 +11,7 @@ export class BullMQController {
   @ApiBody({ type: transcodeParamsDTO })
   @Post()
   async transcode(@Body() job: transcodeParamsDTO) {
-    this.logger.log(`Post transcode request received for Job: ${job}`);
+    this.logger.log(`Post transcode request received for Job: ${job.jobId}`);
     return this.bullMqService.transcode(job);
   }
 }
