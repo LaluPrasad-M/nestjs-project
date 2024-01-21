@@ -7,12 +7,14 @@ import { getConfigModule } from './configServiceApp/config/get-config-module';
 import { getEventEmitterModule } from './eventEmitterApp/config/get-event-emitter-module';
 import { BullMQModule } from './bullApp/bull.module';
 import { EventEmitterModule } from './eventEmitterApp/eventEmitter.module';
+import { getTypeORMModule } from './typeOrmApp/config/get-typeORM-module';
 
 @Module({
   imports: [
     getConfigModule(),
     getBullModule(),
     getEventEmitterModule(),
+    getTypeORMModule(),
     BullMQModule,
     EventEmitterModule,
   ],

@@ -13,16 +13,25 @@ services:
       REDIS_HOST: redis
       REDIS_PORT: 6379
       REDIS_PASSWORD: password
+      REDIS_USERNAME: default
+#      postgres://username:password@host:port/database_name
+      DATABASE_URL: postgres://username:password@postgres:5432/nestjs_app
+      ENABLE_REDIS_CACHE_FOR_TYPEORM: true
+      NODE_ENV: development
     volumes:
       - nestjs-project:/usr/src/appsrc
-#  db:
-#    image: mongo:4.0-xenial
-#    ports:
-#      - 27017:27017
   redis:
     image: redis
     command: redis-server --requirepass password
     ports:
       - 6379:6379
+  postgres:
+    ports:
+      - 5433:5432
+    build: postgres
+    environment:
+      PGDATA: /var/lib/postgresql/data
+    volumes:
+      - ./tmp/pgdata/nestjs_app:/var/lib/postgresql/data
 volumes: 
   nestjs-project:

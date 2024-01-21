@@ -86,6 +86,17 @@ $ npm i @nestjs/event-emitter
 
 <hr style="border:2px solid rgb(90,40,40)">
 
+## 4. TypeORM
+Maps tables to model classes
+### Package installation
+```bash
+$ npm i @nestjs/typeorm typeorm pg
+
+$ npm i typeorm-naming-strategies
+```
+
+<hr style="border:2px solid rgb(90,40,40)">
+
 # Installation
 
 ```bash
