@@ -8,6 +8,8 @@ import { getEventEmitterModule } from './eventEmitterApp/config/get-event-emitte
 import { BullMQModule } from './bullApp/bull.module';
 import { EventEmitterModule } from './eventEmitterApp/eventEmitter.module';
 import { getTypeORMModule } from './typeOrmApp/config/get-typeORM-module';
+import { SseModule } from './serverSentEventsApp/sse.module';
+import { getServeStaticModule } from './serveStaticApp/config/serve-static.module';
 
 @Module({
   imports: [
@@ -15,8 +17,10 @@ import { getTypeORMModule } from './typeOrmApp/config/get-typeORM-module';
     getBullModule(),
     getEventEmitterModule(),
     getTypeORMModule(),
+    getServeStaticModule(),
     BullMQModule,
     EventEmitterModule,
+    SseModule,
   ],
   controllers: [AppController],
   providers: [AppService],

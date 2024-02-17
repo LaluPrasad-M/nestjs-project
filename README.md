@@ -84,7 +84,7 @@ Provides a simple observer implementation, allowing you to subscribe and listen 
 $ npm i @nestjs/event-emitter
 ```
 
-<hr style="border:2px solid rgb(90,40,40)">
+<hr style="border:2px solid rgb(128,128,128)">
 
 ## 4. TypeORM
 Maps tables to model classes
@@ -94,6 +94,22 @@ $ npm i @nestjs/typeorm typeorm pg
 
 $ npm i typeorm-naming-strategies
 ```
+
+<hr style="border:2px solid rgb(128,128,128)">
+
+## 5. Serve-Static
+serve static content like Single Page Applications (SPA)
+### Package installation
+```bash
+$ npm i @nestjs/serve-static
+```
+
+<hr style="border:2px solid rgb(128,128,128)">
+
+## 6. RXJS
+a library made to ease out working with asynchronous and event-based programs
+### Package installation
+Not Required, as it comes pre-installed with nestJs
 
 <hr style="border:2px solid rgb(90,40,40)">
 

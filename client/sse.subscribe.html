@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<script type="text/javascript">
+  const eventSource = new EventSource('/sse/subscribe');
+  eventSource.onmessage = ( {data} ) => {
+    const message = document.createElement('li');
+    message.innerText = JSON.stringify(data);
+    document.body.appendChild(message);
+  }
+</script>
+<body>
+
+</body>
+</html>
