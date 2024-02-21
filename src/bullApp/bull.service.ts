@@ -24,9 +24,9 @@ export class BullMQService {
         );
         try {
           await existingJob?.remove();
-        } catch (e) {
+        } catch (error) {
           throw new Error(
-            `Job ${job.jobId} is still in progress in ${TRANSCODE_QUEUE} Queue. ${e?.message}`,
+            `Job ${job.jobId} is still in progress in ${TRANSCODE_QUEUE} Queue. ${error}`,
           );
         }
       }

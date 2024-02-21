@@ -1,0 +1,25 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "address": "0.0.0.0",
+            "localRoot": "${workspaceFolder}",
+            "name": "Docker-Debug: Nestjs-Project",
+            "port": 13000,
+            "remoteRoot": "/usr/src/app",
+            "request": "attach",
+            "protocol": "inspector",
+            "program": "${file}",
+            "skipFiles": [
+                "<node_internals>/**",
+                "node_modules/**"
+            ],
+            "type": "node",
+            "restart": true,
+            "trace": true,
+            "outFiles": ["${workspaceFolder}/dist/**/*.js"],
+            "sourceMaps": true,
+            "resolveSourceMapLocations": ["${workspaceFolder}/**", "!**/node_modules/**"]
+        }
+    ]
+}

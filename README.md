@@ -30,11 +30,11 @@
 
 # To create new Nestjs App
 ```bash
-$ nvm use 18
+nvm use 18
 
-$ npm i -g @nest/cli
+npm i -g @nest/cli
 
-$ nest new nestjs-project
+nest new nestjs-project
 ```
 <hr style="border:2px solid rgb(80,80,40)">
 
@@ -45,9 +45,9 @@ Bull is a nestjs Library used to run independent Jobs which are added in the Bul
 
 ### Package installation
 ```bash
-$ npm i @nestjs/bull bull
+npm i @nestjs/bull bull
 
-$ npm i -D @types/bull
+npm i -D @types/bull
 ```
 <hr style="border:2px solid rgb(128,128,128)">
 
@@ -56,7 +56,7 @@ $ npm i -D @types/bull
 
 ### Package installation
 ```bash
-$ npm i @nestjs/config
+npm i @nestjs/config
 ```
 <hr style="border:2px solid rgb(128,128,128)">
 
@@ -65,7 +65,7 @@ Allows us to generate documentation simply based on our code
 
 ### Package installation
 ```bash
-$ npm i @nestjs/swagger swagger-ui-express
+npm i @nestjs/swagger swagger-ui-express
 ```
 <hr style="border:2px solid rgb(128,128,128)">
 
@@ -73,7 +73,7 @@ $ npm i @nestjs/swagger swagger-ui-express
 Provides decorators and utilities for validating data using class-based validation rules
 ### Package installation
 ```bash
-$ npm i class-validator
+npm i class-validator
 ```
 <hr style="border:2px solid rgb(128,128,128)">
 
@@ -81,7 +81,7 @@ $ npm i class-validator
 Provides a simple observer implementation, allowing you to subscribe and listen for various events that occur in your application.
 ### Package installation
 ```bash
-$ npm i @nestjs/event-emitter
+npm i @nestjs/event-emitter
 ```
 
 <hr style="border:2px solid rgb(128,128,128)">
@@ -90,9 +90,9 @@ $ npm i @nestjs/event-emitter
 Maps tables to model classes
 ### Package installation
 ```bash
-$ npm i @nestjs/typeorm typeorm pg
+npm i @nestjs/typeorm typeorm pg
 
-$ npm i typeorm-naming-strategies
+npm i typeorm-naming-strategies
 ```
 
 <hr style="border:2px solid rgb(128,128,128)">
@@ -101,7 +101,7 @@ $ npm i typeorm-naming-strategies
 serve static content like Single Page Applications (SPA)
 ### Package installation
 ```bash
-$ npm i @nestjs/serve-static
+npm i @nestjs/serve-static
 ```
 
 <hr style="border:2px solid rgb(128,128,128)">
@@ -116,32 +116,32 @@ Not Required, as it comes pre-installed with nestJs
 # Installation
 
 ```bash
-$ npm install
+npm install
 ```
 
 # Running the app
 
 ```bash
 # development
-$ npm run start
+npm run start
 
 # watch mode
-$ npm run start:dev
+npm run start:dev
 
 # production mode
-$ npm run start:prod
+npm run start:prod
 ```
 
 # Test
 
 ```bash
 # unit tests
-$ npm run test
+npm run test
 
 # e2e tests
-$ npm run test:e2e
+npm run test:e2e
 
 # test coverage
-$ npm run test:cov
+npm run test:cov
 ```
 

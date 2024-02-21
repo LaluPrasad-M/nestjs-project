@@ -6,6 +6,7 @@ services:
     ports:
       - 3000:3000
       - 9229:9229
+      - 13000:13000
     environment:
       DB_URL: mongodb://db/db_name
 #      redis://<username>:<password>@<host>:<port>
@@ -16,6 +17,7 @@ services:
       REDIS_USERNAME: default
 #      postgres://username:password@host:port/database_name
       DATABASE_URL: postgres://username:password@postgres:5432/nestjs_app
+      RABBITMQ_URL: amqp://rabbitmq:5672
       ENABLE_REDIS_CACHE_FOR_TYPEORM: true
       NODE_ENV: development
     volumes:
