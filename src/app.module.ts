@@ -10,6 +10,7 @@ import { EventEmitterModule } from './eventEmitterApp/eventEmitter.module';
 import { getTypeORMModule } from './typeOrmApp/config/get-typeORM-module';
 import { SseModule } from './serverSentEventsApp/sse.module';
 import { getServeStaticModule } from './serveStaticApp/config/serve-static.module';
+import { RabbitModule } from './rabbitMQApp/rabbit.module';
 
 @Module({
   imports: [
@@ -21,6 +22,7 @@ import { getServeStaticModule } from './serveStaticApp/config/serve-static.modul
     BullMQModule,
     EventEmitterModule,
     SseModule,
+    RabbitModule,
   ],
   controllers: [AppController],
   providers: [AppService],

@@ -35,5 +35,10 @@ services:
       PGDATA: /var/lib/postgresql/data
     volumes:
       - ./tmp/pgdata/nestjs_app:/var/lib/postgresql/data
+  rabbitmq:
+    image: rabbitmq:3.8-management-alpine
+    ports:
+      - 5672:5672
+      - 15672:15672
 volumes: 
   nestjs-project:
