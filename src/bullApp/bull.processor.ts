@@ -1,7 +1,7 @@
 import { Processor, Process } from '@nestjs/bull';
 import { Logger } from '@nestjs/common';
 import { Job } from 'bull';
-import { BullEvents, TRANSCODE_QUEUE } from 'src/bullApp/lib/constants';
+import { BullEvents, TRANSCODE_QUEUE } from './lib/constants';
 
 @Processor(TRANSCODE_QUEUE)
 export class BullMQProcessor {

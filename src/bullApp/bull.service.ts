@@ -1,7 +1,7 @@
 import { InjectQueue } from '@nestjs/bull';
 import { Injectable, Logger } from '@nestjs/common';
 import { Queue } from 'bull';
-import { TRANSCODE_QUEUE, BullEvents } from 'src/bullApp/lib/constants';
+import { TRANSCODE_QUEUE, BullEvents } from './lib/constants';
 import { TranscodeParamsDTO } from './bull.model';
 
 @Injectable()
