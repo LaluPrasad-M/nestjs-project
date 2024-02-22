@@ -12,37 +12,34 @@ export class RabbitEmitterService {
     const routingKey = 'routingKey';
     const id = 'id';
     try {
-      // this.logger.log(
-      //   `Connection before closing: ${this.amqpConnection.connected}`,
-      // );
-      // await this.amqpConnection.close();
-      // this.logger.log(
-      //   `Connection after closing: ${this.amqpConnection.connected}`,
-      // );
-      //
-      // await this.amqpConnection.init();
-      // this.logger.log(
-      //   `Connection after init: ${this.amqpConnection.connected}`,
-      // );
+      this.logger.log(
+        `Connection before closing: ${this.amqpConnection.connected}`,
+      );
+      await this.amqpConnection.close();
+      this.logger.log(
+        `Connection after closing: ${this.amqpConnection.connected}`,
+      );
 
-      // this.logger.log(`configuration: ${this.amqpConnection.configuration}`);
-      // this.logger.log(
-      //   `keys: ${Object.keys(this.amqpConnection.configuration)}`,
-      // );
-      //
-      // this.logger.log(`channel: ${this.amqpConnection.channel}`);
-      // this.logger.log(`keys: ${Object.keys(this.amqpConnection.channel)}`);
-      //
-      // this.logger.log(
-      //   `managedConnection: ${this.amqpConnection.managedConnection}`,
-      // );
-      // this.logger.log(
-      //   `keys: ${Object.keys(this.amqpConnection.managedConnection)}`,
-      // );
+      if (!this.amqpConnection.connected) {
+        this.logger.log(`AMQP connection not initialized. Initializing now...`);
+        await this.amqpConnection.init();
 
-      // await this.amqpConnection.managedConnection.connectionOptions;
-
-      await this.amqpConnection.publish(exchange, routingKey, message);
+        // check if the connection is established after 0.5 second for 6 times
+        let retries = 6;
+        while (!this.amqpConnection.connected && retries > 0) {
+          this.logger.log(
+            `Connection not established. Retrying... ${retries} attempts left`,
+          );
+          await new Promise((resolve) => setTimeout(resolve, 500));
+          retries--;
+        }
+      }
+      if (this.amqpConnection.connected) {
+        this.logger.log(`Connection established. Sending message...`);
+        await this.amqpConnection.publish(exchange, routingKey, message);
+      } else {
+        throw new Error('Connection not established. Message not sent.');
+      }
       return 'Message sent';
     } catch (error) {
       const errorMessage = `Error sending data to ${exchange} queue for ${id}. ${error}`;

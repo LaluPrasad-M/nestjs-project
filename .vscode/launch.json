@@ -17,7 +17,7 @@
             "type": "node",
             "restart": true,
             "trace": true,
-            "outFiles": ["${workspaceFolder}/dist/**/*.js"],
+            "outFiles": ["${workspaceFolder}/dist/**/*.js","${workspaceFolder}/dist/**/*.ts"],
             "sourceMaps": true,
             "resolveSourceMapLocations": ["${workspaceFolder}/**", "!**/node_modules/**"]
         }
