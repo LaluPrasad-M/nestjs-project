@@ -1,8 +1,12 @@
-import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
+import {
+  DocumentBuilder,
+  SwaggerDocumentOptions,
+  SwaggerModule,
+} from '@nestjs/swagger';
 import { INestApplication } from '@nestjs/common';
 
 export function setSwaggerSetup(app: INestApplication): void {
-  const options = new DocumentBuilder()
+  const config = new DocumentBuilder()
     .setTitle('Nest JS App')
     .setDescription(
       'Service for Learning and Understanding all the nestjs packages and its implementations',
@@ -10,7 +14,12 @@ export function setSwaggerSetup(app: INestApplication): void {
     .setVersion('1.0')
     .addTag('nestjs-app')
     .build();
-  const document = SwaggerModule.createDocument(app, options);
+  const options: SwaggerDocumentOptions = {
+    operationIdFactory: (controllerKey: string, methodKey: string) =>
+      controllerKey + '_' + methodKey,
+    deepScanRoutes: true,
+  };
+  const document = SwaggerModule.createDocument(app, config, options);
   SwaggerModule.setup('api', app, document);
 }
 

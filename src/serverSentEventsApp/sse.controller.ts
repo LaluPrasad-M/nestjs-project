@@ -4,12 +4,13 @@ import { SseService } from './sse.service';
 
 const CHANNEL = 'test';
 
-/*
-  Open {HOST}/sse.subscribe.html in browser
- */
 @Controller('sse')
 export class SseController {
   constructor(private readonly sseService: SseService) {}
+
+  /*
+  Open {HOST}/sse.subscribe.html in browser
+ */
   @Sse('subscribe')
   sseSubscribe(): Observable<unknown> {
     return this.sseService.sseSubscribe(CHANNEL);
