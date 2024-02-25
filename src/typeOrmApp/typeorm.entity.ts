@@ -14,5 +14,5 @@ export class TestEntity {
   username: string;
 
   @Column({ type: 'varchar' })
-  description: string;
+  description?: string;
 }

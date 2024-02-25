@@ -2,6 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { TestEntity } from './typeorm.entity';
+import { TestParamsDTO } from './typeorm.model';
 
 @Injectable()
 export class TypeormService {
@@ -16,12 +17,12 @@ export class TypeormService {
     });
   }
 
-  async createTestEntity(testEntity: TestEntity) {
+  async createTestEntity(testEntity: TestParamsDTO) {
     const newTestEntity = new TestEntity({
       username: testEntity.username || 'test',
-      description: testEntity.description || 'test Desc',
+      description: testEntity.description,
     });
     await this.testRepo.save(newTestEntity);
-    return testEntity;
+    return newTestEntity;
   }
 }
