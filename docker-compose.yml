@@ -29,7 +29,7 @@ services:
       - 6379:6379
   postgres:
     ports:
-      - 5433:5432
+      - 5432:5432
     build: postgres
     environment:
       PGDATA: /var/lib/postgresql/data

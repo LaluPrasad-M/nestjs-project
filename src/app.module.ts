@@ -11,8 +11,8 @@ import { RabbitModule } from './rabbitMQApp/rabbit.module';
 
 @Module({
   imports: [
-    TypeormModule,
     ConfigServiceModule,
+    TypeormModule,
     BullMQModule,
     EventEmitterModule,
     SseModule,
