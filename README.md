@@ -120,6 +120,15 @@ an open-source and lightweight message broker which supports multiple messaging 
 npm i @golevelup/nestjs-rabbitmq
 ```
 
+<hr style="border:2px solid rgb(128,128,128)">
+
+## 7. Rate Limiter | Throttler
+used to override the limit and ttl set in the global module, to give tighter or looser security options
+### Package installation
+```bash
+npm i @nestjs/throttler
+```
+
 <hr style="border:2px solid rgb(90,40,40)">
 
 # Installation

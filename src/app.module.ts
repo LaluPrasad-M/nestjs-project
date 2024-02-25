@@ -8,10 +8,12 @@ import { BullMQModule } from './bullApp/bull.module';
 import { EventEmitterModule } from './eventEmitterApp/eventEmitter.module';
 import { SseModule } from './serverSentEventsApp/sse.module';
 import { RabbitModule } from './rabbitMQApp/rabbit.module';
+import { ThrottlerModule } from './throttlerApp/throttler.module';
 
 @Module({
   imports: [
     ConfigServiceModule,
+    ThrottlerModule,
     TypeormModule,
     BullMQModule,
     EventEmitterModule,
