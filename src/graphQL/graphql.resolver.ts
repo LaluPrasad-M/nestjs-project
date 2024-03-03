@@ -24,7 +24,7 @@ export class GraphQLResolver {
   }
 
   @Mutation(() => UserResponse)
-  async createUser(@Args('name') name: string): Promise<User> {
+  async createUser(@Args('name') name: string): Promise<UserResponse> {
     return this.graphqlService.createUser(name);
   }
 }

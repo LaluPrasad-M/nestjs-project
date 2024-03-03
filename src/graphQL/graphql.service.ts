@@ -1,5 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { UserArgs } from './graphql.args';
+import { UserResponse } from './graphql.type';
 
 @Injectable()
 export class GraphQLService {
@@ -15,7 +16,7 @@ export class GraphQLService {
     return { id: '1', name };
   }
 
-  async createUser(name: string) {
-    return { id: '1', name };
+  async createUser(name: string): Promise<UserResponse> {
+    return { data: { id: '1', name }, errors: [] };
   }
 }
