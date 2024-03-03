@@ -9,11 +9,13 @@ import { EventEmitterModule } from './eventEmitterApp/eventEmitter.module';
 import { SseModule } from './serverSentEventsApp/sse.module';
 import { RabbitModule } from './rabbitMQApp/rabbit.module';
 import { ThrottlerModule } from './throttlerApp/throttler.module';
+import { GraphQLModule } from './graphQL/graphql.module';
 
 @Module({
   imports: [
     ConfigServiceModule,
     ThrottlerModule,
+    GraphQLModule,
     TypeormModule,
     BullMQModule,
     EventEmitterModule,

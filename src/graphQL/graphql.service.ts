@@ -14,4 +14,8 @@ export class GraphQLService {
   async findUserByName(name: string) {
     return { id: '1', name };
   }
+
+  async createUser(name: string) {
+    return { id: '1', name };
+  }
 }
