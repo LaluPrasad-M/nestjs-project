@@ -12,9 +12,15 @@ export class TypeormService {
   ) {}
 
   async getTestEntity(id: number) {
-    return await this.testRepo.findOne({
-      where: { id: id },
-    });
+    return await this.testRepo
+      .createQueryBuilder('test')
+      .where('test.id = :id', { id: id })
+      .cache(60000) // 1 minute
+      .getOne();
+    // return await this.testRepo.findOne({
+    //   where: { id: id },
+    //   cache: true,
+    // });
   }
 
   async createTestEntity(testEntity: TestParamsDTO) {
