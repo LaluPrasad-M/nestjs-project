@@ -142,7 +142,6 @@ npm i @nestjs/apollo
 <hr style="border:2px solid rgb(90,40,40)">
 
 ## 9. KafkaJs
-a powerful query language for APIs and a runtime for fulfilling those queries with your existing data
 ### Package installation
 ```bash
 npm i kafkajs
