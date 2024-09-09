@@ -32,7 +32,7 @@
 ```bash
 nvm use 18
 
-npm i -g @nest/cli
+npm i -g @nestjs/cli
 
 nest new nestjs-project
 ```
