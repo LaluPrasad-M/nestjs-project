@@ -131,12 +131,21 @@ npm i @nestjs/throttler
 
 <hr style="border:2px solid rgb(128,128,128)">
 
-## 7. GraphQL
+## 8. GraphQL
 a powerful query language for APIs and a runtime for fulfilling those queries with your existing data
 ### Package installation
 ```bash
 npm i @nestjs/graphql graphql-tools graphql apollo-server-express
 npm i @nestjs/apollo
+```
+
+<hr style="border:2px solid rgb(90,40,40)">
+
+## 9. KafkaJs
+a powerful query language for APIs and a runtime for fulfilling those queries with your existing data
+### Package installation
+```bash
+npm i kafkajs
 ```
 
 <hr style="border:2px solid rgb(90,40,40)">

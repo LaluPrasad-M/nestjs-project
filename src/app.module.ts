@@ -10,6 +10,7 @@ import { SseModule } from './serverSentEventsApp/sse.module';
 import { RabbitModule } from './rabbitMQApp/rabbit.module';
 import { ThrottlerModule } from './throttlerApp/throttler.module';
 import { GraphQLModule } from './graphQL/graphql.module';
+import { KafkaModule } from './kafkajsApp/kafkajs.module';
 
 @Module({
   imports: [
@@ -21,6 +22,7 @@ import { GraphQLModule } from './graphQL/graphql.module';
     EventEmitterModule,
     SseModule,
     RabbitModule,
+    KafkaModule,
   ],
   controllers: [AppController],
   providers: [AppService],
